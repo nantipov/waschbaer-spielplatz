@@ -100,7 +100,7 @@ public class BaumService {
                 throw new IllegalStateException("Could not post event " + eventDTO + ", status code " + status);
             }
 
-            log.debug("Event {} posted: {}", eventDTO.getId(), eventDTO);
+            log.debug("Event {} posted: {}", eventDTO.getType(), eventDTO);
 
         } catch (UnirestException | IOException e) {
             throw new IllegalStateException("Could not post events to baum service", e);
